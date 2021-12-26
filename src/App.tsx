@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import List from "./components/List";
 
-interface IPerson {
+export interface IPerson {
   name: string;
   age: number;
   url: string;
@@ -20,9 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>People invited to our party</h1>
-      {people.map(person => (
-        <h2>{person.name}</h2>
-      ))}
+      <List people={people} />
     </div>
   );
 }
